@@ -1,16 +1,16 @@
 package com.ecvictor.calculator;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 /**
  * Created by ccao on 2017-08-12.
  */
-public class CalculatorTest {
-    @BeforeClass
+public class CalculatorJunitTest {
+    @Before
     public void setUp() {
         System.out.println("Test starts: ...");
     }
@@ -30,11 +30,11 @@ public class CalculatorTest {
         assertNotEquals(3, calculator.divide(1, 2));
     }
 
-//    @Test(expected = ArithmeticException.class)
-//    public void divideByZero() throws Exception {
-//        Calculator calculator = new Calculator();
-//        assertNotEquals(3, calculator.divide(1, 0));
-//    }
+    @Test(expected = ArithmeticException.class)
+    public void divideByZero() throws Exception {
+        Calculator calculator = new Calculator();
+        assertNotEquals(3, calculator.divide(1, 0));
+    }
 
     @Test
     public void multiple() throws Exception {
@@ -42,7 +42,7 @@ public class CalculatorTest {
         calculator.multiple(1, 0);
     }
 
-    @AfterClass
+    @After
     public void shutDown() {
         System.out.println("Test shut down.");
     }
