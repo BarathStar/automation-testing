@@ -9,6 +9,8 @@ class Calculator {
     }
 
     int divide(int i, int j) {
+        if(j==0)
+            return 0;
         return i / j;
     }
 

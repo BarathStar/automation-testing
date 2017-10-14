@@ -35,7 +35,7 @@ public class JusteatTest {
 
         driver = new ChromeDriver(chromeOptions);
 
-        baseUrl = "https://www.just-eat.ca/";
+        baseUrl = "https://www.just-eat.ca";
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
