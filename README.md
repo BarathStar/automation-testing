@@ -60,7 +60,12 @@ Version 52.0 would be a good candidate for xpath checker and Selenium IDE.
 
     http://www.seleniumframework.com/cucumber-jvm-3/cucumber-jvm-and-selenium/
 
-
+# Open project
+    Open IDEA,
+    File -> Open-> pom.xml under automation-testing
+    Choose open as a project
+    Wait untile maven build completed.
+    
 ## Terminal and Start / Stop daemon in Mac
 
 You want to use launchctl to start and stop Jenkins.
