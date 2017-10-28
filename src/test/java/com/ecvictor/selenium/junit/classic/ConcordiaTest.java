@@ -47,15 +47,15 @@ public class ConcordiaTest {
         driver.findElement(By.xpath("//a[@href=\"/about.html\" and @class]")).click();
 
         while (timeout > 0) {
-            String name = driver.getTitle();
-            if (name.equals("About")) {
-                System.out.println("Found the Graduate admissions: " + timeout);
+        String name = driver.getTitle();
+        if (name.equals("About")) {
+            System.out.println("Found the Graduate admissions: " + timeout);
                 break;
-            } else {
-                System.out.println("Not found the Graduate admissions,wait 500 ms");
-                Thread.sleep(interval);
-                timeout -= interval;
-            }
+        } else {
+            System.out.println("Not found the Graduate admissions,wait 500 ms");
+            Thread.sleep(interval);
+            timeout -= interval;
+        }
         }
         if (timeout <= 0)
             Assert.fail("Test failed");
@@ -76,6 +76,7 @@ public class ConcordiaTest {
             WebElement subMenu = driver.findElement(By.linkText("Graduate"));
             actions.moveToElement(subMenu);
             actions.click().build().perform();
+            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
             //wait for page shown up
             while (timeout > 0) {
@@ -106,36 +107,4 @@ public class ConcordiaTest {
         }
     }
 
-    private boolean isElementPresent(By by) {
-        try {
-            driver.findElement(by);
-            return true;
-        } catch (NoSuchElementException e) {
-            return false;
-        }
-    }
-
-    private boolean isAlertPresent() {
-        try {
-            driver.switchTo().alert();
-            return true;
-        } catch (NoAlertPresentException e) {
-            return false;
-        }
-    }
-
-    private String closeAlertAndGetItsText() {
-        try {
-            Alert alert = driver.switchTo().alert();
-            String alertText = alert.getText();
-            if (acceptNextAlert) {
-                alert.accept();
-            } else {
-                alert.dismiss();
-            }
-            return alertText;
-        } finally {
-            acceptNextAlert = true;
-        }
-    }
 }
