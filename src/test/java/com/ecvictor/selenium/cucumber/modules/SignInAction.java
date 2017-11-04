@@ -10,6 +10,7 @@ import org.testng.Reporter;
 import com.ecvictor.selenium.cucumber.pageobjects.AutomationHomePage;
 import com.ecvictor.selenium.cucumber.pageobjects.LoginPage;
 
+import static org.testng.AssertJUnit.assertEquals;
 
 public class SignInAction {
 
@@ -29,6 +30,14 @@ public class SignInAction {
 		Log.info("Click action is performed on Submit button");
 
 		Reporter.log("SignIn Action is successfully perfomred");
+
+	}
+	public static void validateSigninFailed(WebDriver driver) throws Exception{
+
+		assertEquals(AutomationHomePage.invalid_email.getText(),"Authentication failed.") ;
+		Log.info("Authentication failed Found");
+
+		Reporter.log("Validation is performed");
 
 	}
 }

@@ -19,4 +19,6 @@ public class SignoutAction {
 		Reporter.log("Sign out is performed");
 
 	}
+
+
 }

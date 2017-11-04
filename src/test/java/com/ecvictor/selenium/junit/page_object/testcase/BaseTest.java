@@ -9,11 +9,6 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest {
     public WebDriver driver;
     public String baseUrl;
-    private boolean acceptNextAlert = true;
-    private StringBuffer verificationErrors = new StringBuffer();
-
-    private int timeout = 5000;
-    private int interval = 500;
 
     public void setUp() throws Exception {
         //chose driver type

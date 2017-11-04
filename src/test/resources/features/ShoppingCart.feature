@@ -1,6 +1,6 @@
 Feature: Shopping cart on an e-commerce website
-  @sign_in
+  @Shopping
   Scenario: Sign in and sign out
     When I open automationpractice website
     And I sign in
-    Then I sign out
+    Then Sign out failed due to wrong username password

@@ -20,6 +20,10 @@ public class AutomationHomePage extends BaseClass{
 	
 	@FindBy(how=How.LINK_TEXT, using="Sign out")
 	public static WebElement sign_out;
+
+
+	@FindBy(how=How.XPATH, using="//*[@id=\"center_column\"]/div[1]/ol/li")
+	public static WebElement invalid_email;
 		
 	public static class HeaderPage 
 	{

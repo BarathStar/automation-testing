@@ -48,10 +48,10 @@ public class ShoppingCart {
         SignInAction.Execute(driver, datamap.get(0));
     }
 
-    @Then("^I sign out$")
-    public void i_sign_out() throws Throwable {
+    @Then("^Sign out failed due to wrong username password$")
+    public void i_validate_failed() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        SignoutAction.Execute(driver);
+        SignInAction.validateSigninFailed(driver);
     }
 
 }
