@@ -7,7 +7,7 @@
 	<version>0.0.1</version>
 	<properties>
 		<testng.version>6.11</testng.version>
-		<rest-assured.version>3.0.3</rest-assured.version>
+		<rest-assured.version>3.0.5</rest-assured.version>
 		<scribejava-apis.version>2.5.3</scribejava-apis.version>
         <maven-surefire-plugin.version>2.20</maven-surefire-plugin.version>
         <junit.version>4.12</junit.version>
