@@ -5,12 +5,13 @@ package com.ecvictor.selenium.junit.classic;
  */
 
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
@@ -22,7 +23,7 @@ public class GuruTest {
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
 
-    @Before
+    @BeforeTest
     public void setUp() throws Exception {
         //chose driver type
         String os = (System.getProperty("os.name"));
@@ -47,7 +48,7 @@ public class GuruTest {
                 "Introduction to Selenium");
     }
 
-    @After
+    @AfterTest
     public void tearDown() throws Exception {
         driver.close();
         driver.quit();

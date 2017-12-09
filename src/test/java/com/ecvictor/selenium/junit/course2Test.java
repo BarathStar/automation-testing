@@ -3,12 +3,14 @@ package com.ecvictor.selenium.junit;
 
 import java.util.concurrent.TimeUnit;
 
-import org.junit.*;
-
-import static org.junit.Assert.*;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import static org.testng.Assert.fail;
 
 
 public class course2Test {
@@ -17,7 +19,7 @@ public class course2Test {
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
 
-    @Before
+    @BeforeTest
     public void setUp() throws Exception {
         String os = (System.getProperty("os.name"));
 
@@ -69,7 +71,7 @@ public class course2Test {
 
     }
 
-    @After
+    @AfterTest
     public void tearDown() throws Exception {
         driver.quit();
         String verificationErrorString = verificationErrors.toString();
