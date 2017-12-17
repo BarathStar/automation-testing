@@ -3,35 +3,35 @@ Automation Testing Workshop
 =====================
 # Course Outline
 ## Test Automation Strategy (2h)
-### Planning for Automation
-### Skills/Tools/Workflows
+* Planning for Automation
+* Skills/Tools/Workflows
 
 ## Automation Frameworks(23h)
-### UI Testing(15h)
-### Selenium
-### Junit Framework 
-### Cucumber Framework
+* UI Testing(15h)
+* Selenium
+* Junit Framework 
+* Cucumber Framework
 
 ## API Testing(8h)
-### Introduction to API
-### TestNG
-### restassured
+* Introduction to API
+* TestNG
+* restassured
 
 ## Performance/Load Testing (4h)
-### Jmeter Testing
+* Jmeter Testing
 
 ## Testing and Continuous Integration(3h)
-### Build environments 
-### Structure regression
-### Business facing regression
-### Static analysis
-### Jenkins CI
+* Build environments 
+* Structure regression
+* Business facing regression
+* Static analysis
+* Jenkins CI
 
 ## Job Search and Interview(2h)
-### Job Search
-### Building Resume
-### Interview Questions
-* Project Design/internship is added on request.
+* Job Search
+* Building Resume
+* Interview Questions
+### Project Design/internship is added on request.
 
 
 # Setup Environment
