@@ -1,19 +1,12 @@
-package com.ecvictor.selenium.junit.classic.iga;
+package com.ecvictor.selenium.junit.page_object_iga;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 /* Created by caoc on 2/10/17.
  * Copyright (c) 2015 Service ECVictor Inc. All rights reserved.
@@ -30,7 +23,6 @@ public class RegressionTest extends BaseTest {
 
     @Test
     public void testSearchWine() throws Exception {
-        driver.get(baseUrl);
         driver.findElement(By.id("header_0_SearchBox_SearchWithinLink")).click();
         driver.findElement(By.xpath("//div[@id='search-box']/div/ul/li[2]/label")).click();
         driver.findElement(By.id("header_0_SearchBox_TxtSearchKeywords")).sendKeys("wine");
@@ -42,7 +34,6 @@ public class RegressionTest extends BaseTest {
 
     @Test
     public void testSearchRecipes() throws Exception {
-        driver.get(baseUrl);
         driver.findElement(By.id("header_0_SearchBox_SearchWithinLink")).click();
         driver.findElement(By.xpath("//div[@id='search-box']/div/ul/li[3]/label")).click();
         driver.findElement(By.id("header_0_SearchBox_TxtSearchKeywords")).sendKeys("wine");
