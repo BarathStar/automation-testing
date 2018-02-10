@@ -43,12 +43,15 @@ public class UserAcceptanceTest {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
-//    @Test
-//    public void testOpenHomePage() throws Exception {
-//        driver.get(baseUrl);
-//        assertEquals(driver.getTitle(),"IGA | Supermarket in Quebec: Recipes, Online Grocery, Flyer");
-//
-//    }
+    @Test
+    public void testOpenHomePage() throws Exception {
+        driver.get(baseUrl);
+        driver.findElement(By.xpath("//a[@title=\"Fresh Chicken Drumstick\"]")).click();
+        assertEquals(driver.findElement(
+                By.cssSelector("h1.h3-like.product-detail__name > span")).getText(),
+                "Chicken Drumstick");
+    }
+
     @Test
     public void testLoginFailed() throws Exception {
         driver.get(baseUrl);
@@ -61,7 +64,7 @@ public class UserAcceptanceTest {
                 By.cssSelector("#body_0_main_1_LoginBox_ErrorSummaryControl > ul > li")).getText(),
                 "Login unsuccessful : try another email address or another password.");
     }
-
+    //*[@id="body_0_main_0_full61a767ecd2dc40dfae80a3ef0a403968_2_GroceryListControl_GroceryItems_GroceryTemplate_0_NavigateTo_0"]
     @After
     public void tearDown() throws Exception {
         driver.close();
