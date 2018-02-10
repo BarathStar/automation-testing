@@ -1,34 +1,37 @@
 package com.ecvictor.calculator;
 
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class CalculatorTest {
+    Calculator calculator;
+    @BeforeClass
+    public static void setupBeforeClass(){
+        System.out.println("Before Class");
+    }
+
+    @Before
+    public void setup(){
+        calculator = new Calculator();
+    }
+
     @Test
     public void add() throws Exception {
-        assertEquals("1+2 should equals to 3", 3, Calculator.add(1, 2));
-        assertTrue("1+2 should equals to 3", 3 == Calculator.add(1, 2));
-        assertNotEquals("1+2 should not equal to 4", 4, Calculator.add(1, 2));
 
+        assertTrue("Add funtion not equal",6==calculator.add(2,3));
     }
 
     @Test
     public void divide() throws Exception {
-        Calculator calculator = new Calculator();
-        assertTrue("3/2 should be 1", 1 == calculator.divide(3, 2));
-    }
-    @Test
-    public void divideZero() throws Exception {
-        Calculator calculator = new Calculator();
-        assertTrue("3/0 should be 0", 0 == calculator.divide(3, 0));
+        calculator.divide(1,1);
     }
 
     @Test
     public void multiple() throws Exception {
-        Calculator calculator=new Calculator();
-        calculator.multiple(3,4);
-//        assertEquals("3*4 should be 12",12,calculator.multiple(3,4));
+        assertEquals(5,calculator.multiple(2,3));
     }
 
 }
