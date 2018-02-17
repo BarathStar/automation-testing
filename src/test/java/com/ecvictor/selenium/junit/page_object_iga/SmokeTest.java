@@ -27,6 +27,9 @@ public class SmokeTest extends BaseTest {
 
     @Test
     public void testMyAccount() throws Exception {
+        //Given IGA homepage
+        //When I click My account
+        //Then the login page is up
          HomePageAction.clickMyAccount();
     }
 
