@@ -11,7 +11,7 @@ import cucumber.api.junit.Cucumber;
 		features = "classpath:features",
 		plugin = {"pretty", "html:target/cucumber-html-report",
 				"json:target/cucumber.json"},
-		tags = {"@Shopping"}
+		tags = {"@IGA"}
 		)
 public class RunCukesTest{
 	
