@@ -4,12 +4,13 @@ import com.ecvictor.selenium.junit.page_object_iga.page_object.HomePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import static com.ecvictor.selenium.junit.page_object_iga.page_object.HomePage.myAccount;
 import static org.junit.Assert.assertEquals;
 
  public  class  HomePageAction extends BaseAction {
 
     public static void clickMyAccount() {
-        driver.findElement(By.xpath(HomePage.myAccount)).click();
+        myAccount.click();
         assertEquals(driver.findElement(By.xpath("//H1[@class='push-medium--bottom']")).getText(), "LOGIN");
     }
 

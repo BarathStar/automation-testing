@@ -34,7 +34,7 @@ public class SignInAction {
 	}
 	public static void validateSigninFailed(WebDriver driver) throws Exception{
 
-		assertEquals(AutomationHomePage.invalid_email.getText(),"Authentication failed.") ;
+		assertEquals(AutomationHomePage.invalid_email.getText(),"uthentication failed.") ;
 		Log.info("Authentication failed Found");
 
 		Reporter.log("Validation is performed");
