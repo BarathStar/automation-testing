@@ -5,3 +5,4 @@
 .project
 cucumber-java-template.iml
 /test-output/
+.DS_Store
