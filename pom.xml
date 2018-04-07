@@ -174,17 +174,18 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>${maven-surefire-plugin.version}</version>
                     <configuration>
-                        <properties>
-                            <property>
-                                <name>junit</name>
-                                <value>false</value>
-                            </property>
-                        </properties>
+                        <!--<properties>-->
+                            <!--<property>-->
+                                <!--<name>junit</name>-->
+                                <!--<value>false</value>-->
+                            <!--</property>-->
+                        <!--</properties>-->
                         <threadCount>1</threadCount>
                         <suiteXmlFiles>
                             <!--<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>-->
                             <!--<suiteXmlFile>src/test/resources/demo-store-suite.xml</suiteXmlFile>-->
-                            <suiteXmlFile>src/test/resources/anotation-suite.xml</suiteXmlFile>
+                            <!--<suiteXmlFile>src/test/resources/anotation-suite.xml</suiteXmlFile>-->
+                            <suiteXmlFile>src/test/resources/coin-test.xml</suiteXmlFile>
                         </suiteXmlFiles>
                     </configuration>
 

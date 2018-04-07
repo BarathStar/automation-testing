@@ -1,8 +1,9 @@
 package com.ecvictor.api.rest.assured.o2o;
 
 import io.restassured.RestAssured;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
 
 import java.io.IOException;
 import java.io.InputStream;
